@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iframe Touch POC</title>
+  <link rel="stylesheet" href="./app/styles/styles.css">
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <div class="view-navigator">
+    
+    <div class="column column-1 current">
+      <!-- <iframe class="column-frame" src="./frame-amp.html#development=1" frameborder="0"></iframe> -->
+      <iframe class="column-frame" src="./frame1.html" frameborder="0"></iframe>
+    </div>
+    <div class="column column-2">
+      <iframe class="column-frame" src="./frame2.html" frameborder="0"></iframe>
+    </div>
+    <div class="column column-3">
+      <iframe class="column-frame" src="./frame3.html" frameborder="0"></iframe>
+    </div>
+
+  </div>
+  <script src="./bundle/parent.js"></script>
+</body>
+</html>

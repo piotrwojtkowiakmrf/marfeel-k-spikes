@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+.view-navigator {
+  overflow-x: hidden;
+}
+
+.column {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.column.current {
+  position: static;
+}
