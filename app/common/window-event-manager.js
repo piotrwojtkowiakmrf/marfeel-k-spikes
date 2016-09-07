@@ -2,7 +2,7 @@ const EventEmitter = require('events');
 
 function WindowEventManager(global) {
   const scopes = [];
-  const currentScopeUuid = typeof global.__UUID__ === "undefined" ? -1 : global.__UUID__;
+  const { __UUID__: currentScopeUuid } = global;
   const emitter = new EventEmitter();
   let pocket = {};
 

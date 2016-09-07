@@ -3,6 +3,7 @@ let columnUuid = 0;
 
 function ColumnManager(element) {
   const __UUID__ = columnUuid++;
+  const __PARENT_UUID__ = window.__UUID__;
   const frame = element.querySelector('.column-frame');
   const { contentWindow: column } = frame;
 
@@ -14,6 +15,7 @@ function ColumnManager(element) {
   element.style.width = `${window.outerWidth}px`;
   frame.width = window.outerWidth;
   column.__UUID__ = __UUID__;
+  column.__PARENT_UUID__ = __PARENT_UUID__;
   WindowEventManager.register(column);
   WindowEventManager.onUuid(__UUID__, 'column', columnHandler);
 

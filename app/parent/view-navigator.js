@@ -9,8 +9,8 @@ function ViewNavigator(element) {
   let swipeManager = null;
 
   WindowEventManager.on('touchEvent', handleTouchEvent);
-  window.addEventListener('scroll', ({ target: { body }}) => {
-    const { scrollTop } = body;
+  window.addEventListener('scroll', event => {
+    const { scrollTop } = event.target.body;
     const message = {
       scope: 'window',
       value: {

@@ -1,13 +1,17 @@
 const WindowEventManager = require('../common/window-event-manager');
 
-function sendResize() {
+const getSize = () => {
   const { offsetHeight, scrollHeight, clientHeight } = document.body;
+  return Math.max(offsetHeight, scrollHeight, clientHeight)
+}
+
+function sendResize(height = getSize()) {
   const message = {
     scope: 'column',
     value: {
       type: 'resize',
       data: {
-        height: Math.max(offsetHeight, scrollHeight, clientHeight)
+        height: height
       }
     }
   };
